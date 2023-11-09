@@ -1,0 +1,31 @@
+.center-div {
+  padding: 30px;
+  background-color: #F5EFE7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  top:50%;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .center-div {
+    width: 80%;
+  }
+}
+
+img {
+  border-radius: 50%;
+}
+h2 , p{
+  font-family: 'Moon Dance', cursive;
+  margin: 5px auto 20px auto;
+}
+
+button {
+  background-color: #2B2730;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}

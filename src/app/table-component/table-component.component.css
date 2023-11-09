@@ -1,0 +1,61 @@
+
+   #myInput {
+   border: none;
+   padding: 10px 25px;
+   }
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+    margin: 5px auto 20px auto;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .search {
+    margin: 10px auto 20px auto;
+  }
+
+  th {
+    background-color: #A76F6F;
+    cursor: pointer;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  caption {
+    caption-side: top;
+    padding: 8px;
+    background-color: #EAB2A0; /* Set the background color as needed */
+    font-weight: bold;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .centered-div {
+    text-align: center;
+    display: inline;
+  }
+
+  button {
+  background-color: #A76F6F;
+  border: none;
+  color: black;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  }

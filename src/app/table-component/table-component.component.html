@@ -1,0 +1,36 @@
+<div *ngIf="openModal" class="centered-div">
+  <div class="header">
+    <div *ngIf="showSearch" class="search">
+        <label style="font-family: 'Moon Dance', cursive;">Please Provide the Search key   </label>
+        <input type="text" id="myInput" placeholder="Search..." [(ngModel)]="searchText" (input)="filterData()" />
+    </div>
+  </div>
+
+  <div style="overflow-x: auto;">
+       <table class="table">
+        <caption>Table Component</caption>
+          <thead>
+            <tr>
+              <th>User Id</th>
+              <th (click)="sortOut('id')">ID <i class="fa fa-arrows-v"></i></th>
+              <th (click)="sortOut('title')">Title <i class="fa fa-arrows-v"></i></th>
+              <th>Completed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of searchData">
+              <td>{{ item.userId }}</td>
+              <td>{{ item.id }}</td>
+              <td>{{ item.title }}</td>
+              <td>{{ item.completed }}</td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+  
+  <div class="footer">
+    <button (click)="clearSort()">Clear Filter</button>
+  </div>
+
+</div>
+    
