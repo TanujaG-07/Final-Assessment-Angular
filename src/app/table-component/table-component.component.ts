@@ -35,30 +35,15 @@ export class TableComponentComponent implements OnInit {
     this.isSorted = !this.isSorted
     const [...sortedData]  = this.dataToShow;
     if(str.includes('id')) { 
-       if(this.isSorted) {
-        sortedData.sort((a,b)=>{
-          return b['id'] - a['id'];
-         })
-       } else {
-        sortedData.sort((a,b)=>{
-          return a['id'] - b['id'];
-         })
-       }
-
+          this.isSorted ? sortedData.sort((a,b)=>{return b['id'] - a['id'];}) : 
+          sortedData.sort((a,b)=>{return a['id'] - b['id'];})
     } else if(str.includes('title')) {
-      if(this.isSorted) { 
-        sortedData.sort((a:UserData,b:UserData)=>{
-          return a['title'].localeCompare(b['title']);
-         })
-      } else {
-        sortedData.sort((a:UserData,b:UserData)=>{
-          return b['title'].localeCompare(a['title']);
-         })
-      }
-      
+          this.isSorted ? sortedData.sort((a:UserData,b:UserData)=>{ return a['title'].localeCompare(b['title']);}) : 
+          sortedData.sort((a:UserData,b:UserData)=>{ return b['title'].localeCompare(a['title']); })
     }
     this.searchData = [...sortedData]
   }
+  
   filterData() {
     this.searchData = this.dataToShow.filter((item :UserData) => {
       console.log(this.searchText === item['title'])
